@@ -24,12 +24,12 @@ public class Primes {
         for(int x =0; x < arr.length; x++){
          
             if(arr[x]){
-
                 primes++;
+                System.out.println(primes);
             }
          }
            
          int percentage = (int) ((1.0 * primes / (arr.length - 1)) * 100);
-        System.out.print("There are " + primes + " primes between 2 and " + (arr.length-1)+ " (" +percentage+ "% are primes)");
+        System.out.println("There are " + primes + " primes between 2 and " + (arr.length-1)+ " (" +percentage+ "% are primes)");
      }
     }
