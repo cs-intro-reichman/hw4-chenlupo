@@ -25,7 +25,7 @@ public class Primes {
          
             if(arr[x]){
                 primes++;
-                System.out.println(primes);
+            
             }
          }
            
