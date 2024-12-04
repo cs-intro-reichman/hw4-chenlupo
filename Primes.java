@@ -2,7 +2,7 @@ public class Primes {
     public static void main(String[] args) {
 
         int size = Integer.parseInt(args[0]);
-        boolean arr[] = new boolean [size/10];
+        boolean arr[] = new boolean [size/10+1];
         
         for(int i =2; i < arr.length; i++){
             
