@@ -12,8 +12,7 @@ public class Primes {
           int i = 2;
 
         while (i <= Math.sqrt(arr.length-1)) {
-            if (arr[i] == true){
-                System.out.println(i);
+            if (arr[i] == true){;
                 for(int j = i*i; j < arr.length; j+=i){
                     arr[j] = false;
                 }  
