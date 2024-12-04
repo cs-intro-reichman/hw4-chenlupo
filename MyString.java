@@ -20,44 +20,37 @@ public class MyString {
     public static String lowerCase(String str) {
         String lowerCase = "";
         for(int i = 0; i < str.length(); i++){
-            
-            if(str.charAt(i) > 60){
-
-                lowerCase+=str.charAt(i);
-
-            }
-            if(str.charAt(i) < 60){
-
-                lowerCase+=(char)(str.charAt(i)+10);
+            char c = str.charAt(i);
+            if (c >= 'A' && c <= 'Z') {
+                lowerCase += (char) (c + 32);
+            } else {
+                lowerCase += c; 
             }
         }
         return lowerCase;
     }
 
     /** If str1 contains str2, returns true; otherwise returns false. */
-    public static boolean contains(String str1, String str2) {
-
-        if(str1.length() < str2.length()){
+        public static boolean contains(String str1, String str2) {
+            if (str1.length() < str2.length()) {
+                return false; // str1 can't contain str2 if it's shorter
+            }
+            
+            for (int i = 0; i <= str1.length() - str2.length(); i++) {
+                boolean match = true;
+                
+                for (int j = 0; j < str2.length(); j++) {
+                    if (str1.charAt(i + j) != str2.charAt(j)) {
+                        match = false;
+                        break; 
+                    }
+                }
+                
+                if (match) {
+                    return true; 
+                }
+            }
+            
             return false;
-        }
-        int index = 0;
-       int count= 0;
-       
-
-       for (int i = 0; i < str1.length(); i++){
-        if(str2.charAt(0) == str1.charAt(i)){
-             index = i;
-              break;
-        }
-    }
-        for (int j = 0; j < str2.length(); j++){
-          if(str2.charAt(j) == str1.charAt(j+index)){
-            count++;
-          }
-       }
-       if(count == str2.length()){
-        return true;
-       }
-        return false;
     }
 }
