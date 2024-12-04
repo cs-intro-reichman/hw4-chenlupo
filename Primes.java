@@ -29,7 +29,7 @@ public class Primes {
             }
          }
            
-        
-        System.out.println("There are " + primes + " primes between 2 and " + (arr.length-1)+ " (" +(int)(1.0*primes/(arr.length-1))*100+ "% are primes)");
+         int percentage = (int) ((1.0 * primes / (arr.length - 2)) * 100);
+        System.out.println("There are " + primes + " primes between 2 and " + (arr.length-1)+ " (" +percentage+ "% are primes)");
      }
     }
