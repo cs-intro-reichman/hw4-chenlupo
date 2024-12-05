@@ -20,16 +20,21 @@ public class Primes {
            i++;
         }
 
+
+        System.out.println("Prime numbers up to "+ (arr.length-1)+ ":");
         for(int x =0; x < arr.length; x++){
          
             if(arr[x]){
                 primes++;
-            
+            System.out.println(x);
             }
          }
            
          int percentage = (int) ((1.0 * primes / (arr.length - 1)) * 100);
        
+
+         
+        
     System.out.println("There are " + primes + " primes between 2 and " +  (arr.length-1) + " (" + percentage + "% are primes)");
      }
     }
